@@ -339,22 +339,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== CONTACT FORM =====
+// ===== CONTACT FORM (Formspree) =====
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
+    const originalHTML = btn.innerHTML;
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-    setTimeout(() => {
-      form.innerHTML = `
-        <div class="form-success" style="display:block">
-          <i class="fas fa-check-circle" style="font-size:2.5rem;color:#16a34a;margin-bottom:12px;display:block"></i>
-          <h3>✓</h3>
-          <p style="color:#5a6a7a;margin-top:8px">Entraremos em contato em breve.</p>
-        </div>`;
-    }, 1200);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.innerHTML = `
+          <div class="form-success" style="display:block">
+            <i class="fas fa-check-circle" style="font-size:2.5rem;color:#16a34a;margin-bottom:12px;display:block"></i>
+            <h3 style="color:#1e2d3d">Mensagem enviada!</h3>
+            <p style="color:#5a6a7a;margin-top:8px">Entraremos em contato em breve.</p>
+          </div>`;
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = originalHTML;
+        alert('Erro ao enviar. Tente novamente.');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = originalHTML;
+      alert('Erro de conexão. Tente novamente.');
+    }
   });
 }
 
