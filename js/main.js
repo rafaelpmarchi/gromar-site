@@ -339,7 +339,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== CONTACT FORM (Formspree) =====
+// ===== CONTACT FORM (AWS Lambda) =====
+const LAMBDA_URL = 'https://q2bs5tahxpk4bzc2me45rgh77i0mzfym.lambda-url.sa-east-1.on.aws/';
+
 const form = document.getElementById('contactForm');
 if (form) {
   form.addEventListener('submit', async e => {
@@ -349,11 +351,18 @@ if (form) {
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
 
+    const payload = {
+      name:    document.getElementById('name').value,
+      email:   document.getElementById('email').value,
+      phone:   document.getElementById('phone').value,
+      message: document.getElementById('message').value,
+    };
+
     try {
-      const response = await fetch(form.action, {
+      const response = await fetch(LAMBDA_URL, {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' }
       });
 
       if (response.ok) {
