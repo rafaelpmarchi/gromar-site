@@ -340,7 +340,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== CONTACT FORM (AWS Lambda) =====
-const LAMBDA_URL = 'https://q2bs5tahxpk4bzc2me45rgh77i0mzfym.lambda-url.sa-east-1.on.aws/';
+const LAMBDA_URL = 'https://m4e7qo09vf.execute-api.sa-east-1.amazonaws.com/contact';
 
 const form = document.getElementById('contactForm');
 if (form) {
