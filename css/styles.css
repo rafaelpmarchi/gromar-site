@@ -430,6 +430,26 @@ nav { display: flex; align-items: center; }
   color: var(--text);
 }
 .service-card ul li i { color: var(--accent); font-size: 0.75rem; }
+.btn-service {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition);
+  border: 2px solid var(--primary);
+}
+.btn-service:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(26,60,110,0.3);
+}
 
 /* ===== PORTFOLIO ===== */
 .portfolio {

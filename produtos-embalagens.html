@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos — Embalagens | Gromar Indústria e Comércio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/produtos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Gromar Indústria e Comércio" class="logo-img" />
+      </div>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#inicio" data-i18n="nav.home">Início</a></li>
+          <li><a href="index.html#servicos" data-i18n="nav.services">Serviços</a></li>
+          <li><a href="produtos.html" data-i18n="nav.products">Produtos</a></li>
+          <li><a href="index.html#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="index.html#contato" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false">
+            <span class="flag" id="currentFlag">🇧🇷</span>
+            <span class="lang-code" id="currentCode">PT</span>
+            <i class="fas fa-chevron-down chevron"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown" role="menu">
+            <button class="lang-option active" data-lang="pt" role="menuitem">
+              <span class="flag">🇧🇷</span>
+              <span class="lang-name">Português</span>
+              <i class="fas fa-check check"></i>
+            </button>
+            <button class="lang-option" data-lang="es" role="menuitem">
+              <span class="flag">🇪🇸</span>
+              <span class="lang-name">Español</span>
+              <i class="fas fa-check check"></i>
+            </button>
+            <button class="lang-option" data-lang="en" role="menuitem">
+              <span class="flag">🇺🇸</span>
+              <span class="lang-name">English</span>
+              <i class="fas fa-check check"></i>
+            </button>
+          </div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MINI HERO -->
+  <section class="products-hero">
+    <div class="container">
+      <div>
+        <span class="section-tag" data-i18n="prod.tag">Catálogo</span>
+        <h1 data-i18n="prod.title">Nossos Produtos</h1>
+      </div>
+      <a href="produtos.html" class="back-link"><i class="fas fa-arrow-left"></i> <span data-i18n="prod.back.catalog">Todos os setores</span></a>
+    </div>
+  </section>
+
+  <!-- SECTOR BANNER -->
+  <div class="sector-banner banner-pkg">
+    <div class="container">
+      <div class="banner-content">
+        <div class="banner-icon"><i class="fas fa-box"></i></div>
+        <div class="banner-text">
+          <span class="banner-label" data-i18n="prod.label">Produtos</span>
+          <h2 data-i18n="prod.pkg.title">Embalagens</h2>
+          <p data-i18n="prod.pkg.desc">Equipamentos e peças para linhas de aplicação de tampas plásticas</p>
+        </div>
+        <div class="banner-count">
+          <span class="count-number">4</span>
+          <span class="count-label" data-i18n="prod.items">produtos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section class="catalog-products">
+    <div class="container">
+      <div class="product-grid">
+        <div class="product-card">
+          <h3 data-i18n="prod.pkg.p1.title">Selecionadores de Tampas</h3>
+          <p data-i18n="prod.pkg.p1.desc">Equipamentos automatizados para seleção e orientação de tampas plásticas em linhas de envase de alta velocidade.</p>
+          <span class="product-tag" data-i18n="prod.pkg.p1.tag">Equipamento</span>
+        </div>
+        <div class="product-card">
+          <h3 data-i18n="prod.pkg.p2.title">Cabeçotes Rosqueadores Magnéticos</h3>
+          <p data-i18n="prod.pkg.p2.desc">Cabeçotes com tecnologia magnética para rosqueamento preciso de tampas, garantindo torque controlado e repetibilidade.</p>
+          <span class="product-tag" data-i18n="prod.pkg.p2.tag">Componente</span>
+        </div>
+        <div class="product-card">
+          <h3 data-i18n="prod.pkg.p3.title">Peças de Reposição OEM</h3>
+          <p data-i18n="prod.pkg.p3.desc">Usinagem sob medida de peças de reposição para equipamentos de embalagem, com especificações originais do fabricante.</p>
+          <span class="product-tag" data-i18n="prod.pkg.p3.tag">Usinagem</span>
+        </div>
+        <div class="product-card">
+          <h3 data-i18n="prod.pkg.p4.title">Estrelas e Guias de Transporte</h3>
+          <p data-i18n="prod.pkg.p4.desc">Componentes de precisão para transporte e posicionamento de garrafas e frascos em linhas de produção.</p>
+          <span class="product-tag" data-i18n="prod.pkg.p4.tag">Componente</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER SECTORS -->
+  <section class="other-sectors">
+    <div class="container">
+      <h2 data-i18n="prod.other">Outros Setores</h2>
+      <div class="sector-links">
+        <a href="produtos-agronegocio.html" class="sector-link-card">
+          <div class="sl-icon icon-agro"><i class="fas fa-tractor"></i></div>
+          <div>
+            <h3 data-i18n="prod.agro.title">Agronegócio</h3>
+            <span>3 <span data-i18n="prod.items">produtos</span></span>
+          </div>
+          <i class="fas fa-arrow-right sl-arrow"></i>
+        </a>
+        <a href="produtos-energia.html" class="sector-link-card">
+          <div class="sl-icon icon-energy"><i class="fas fa-wind"></i></div>
+          <div>
+            <h3 data-i18n="prod.energy.title">Energia</h3>
+            <span>3 <span data-i18n="prod.items">produtos</span></span>
+          </div>
+          <i class="fas fa-arrow-right sl-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-i18n="prod.cta.title">Precisa de uma solução específica?</h2>
+      <p data-i18n="prod.cta.desc">Entre em contato e solicite um orçamento personalizado para sua demanda.</p>
+      <a href="index.html#contato" class="btn btn-primary" data-i18n="prod.cta.btn">Solicitar Orçamento</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Gromar" class="logo-img footer-logo" />
+        <p>Usinagem de precisão e soluções industriais desde 1986.</p>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="ftr.links">Links Rápidos</h4>
+        <ul>
+          <li><a href="index.html#inicio" data-i18n="nav.home">Início</a></li>
+          <li><a href="index.html#servicos" data-i18n="nav.services">Serviços</a></li>
+          <li><a href="produtos.html" data-i18n="nav.products">Produtos</a></li>
+          <li><a href="index.html#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="index.html#contato" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p><i class="fab fa-whatsapp"></i> +55 19 9 8178-4916</p>
+        <p><i class="fas fa-map-marker-alt"></i> Piracicaba – SP</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Gromar Indústria e Comércio Ltda. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5519981784916" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
